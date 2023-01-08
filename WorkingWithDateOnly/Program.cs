@@ -22,24 +22,26 @@ internal partial class Program
          * Parse a string to DateOnly, notice the culture
          */
         Console.WriteLine();
+        var bad = "09/01/2022";
         Console.WriteLine("Assertion to determine if a string can represent a DateOnly");
-        if (DateOnly.TryParse("09/01/2022", new CultureInfo("en"), DateTimeStyles.None, out var date))
+        if (DateOnly.TryParse(bad, new CultureInfo("en"), DateTimeStyles.None, out var date))
         {
-            Console.WriteLine(date);
+            AnsiConsole.MarkupLine($"Valid [cyan]{date}[/]");
         }
         else
         {
-            Console.WriteLine("Failed");
+            AnsiConsole.MarkupLine("[red]Failed[/]");
         }
 
 
+        bad = "28/09/2022";
         if (DateOnly.TryParse("28/09/2022", new CultureInfo("en"), DateTimeStyles.None, out var result))
         {
             Console.WriteLine(result);
         }
         else
         {
-            Console.WriteLine("Failed");
+            AnsiConsole.MarkupLine($"[red]Failed[/] {bad}");
         }
 
         Console.ReadLine();

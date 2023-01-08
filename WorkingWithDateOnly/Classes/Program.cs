@@ -20,8 +20,8 @@ internal partial class Program
     {
         Helpers.PrintSampleName();
 
-        var dates = DateOnlyMethods.GetMonthDays(DateTime.Now.Month);
-        var chunked = dates.Chunk(7).ToList();
+        List<DateOnly> dates = DateOnlyMethods.GetMonthDays(DateTime.Now.Month);
+        List<DateOnly[]> chunked = dates.Chunk(7).ToList();
             
 
         AnsiConsole.MarkupLine($"[cyan]Dates in[/]  [b]{DateOnlyMethods.MonthName}[/]\n");
@@ -33,7 +33,7 @@ internal partial class Program
 
         Console.WriteLine();
         AnsiConsole.MarkupLine("[cyan]Next week's dates[/]");
-        var nextWeeksDates = DateOnlyMethods.NextWeeksDates();
+        List<DateOnly> nextWeeksDates = DateOnlyMethods.NextWeeksDates();
 
         Console.WriteLine(string.Join(",", nextWeeksDates));
     }
@@ -41,8 +41,8 @@ internal partial class Program
     {
         Helpers.PrintSampleName();
 
-        var dates = DateTimeMethods.GetMonthDays(DateTime.Now.Month);
-        var chunked = dates.Chunk(7).ToList();
+        List<DateTime> dates = DateTimeMethods.GetMonthDays(DateTime.Now.Month);
+        List<DateTime[]> chunked = dates.Chunk(7).ToList();
 
 
         AnsiConsole.MarkupLine($"[cyan]Dates in[/]  [b]{DateTimeMethods.MonthName}[/]\n");
@@ -54,7 +54,7 @@ internal partial class Program
 
         Console.WriteLine();
         AnsiConsole.MarkupLine("[cyan]Next week's dates[/]");
-        var nextWeeksDates = DateTimeMethods.NextWeeksDates();
+        List<DateTime> nextWeeksDates = DateTimeMethods.NextWeeksDates();
 
         Console.WriteLine(string.Join(",", nextWeeksDates.Formatted()));
     }
