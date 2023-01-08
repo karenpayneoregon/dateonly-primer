@@ -14,7 +14,7 @@ internal class JsonOperations
     {
         JsonSerializerOptions JsonSerializerOptions()
         {
-            var jsonSerializerOptions = new JsonSerializerOptions(JsonSerializerDefaults.General);
+            JsonSerializerOptions jsonSerializerOptions = new JsonSerializerOptions(JsonSerializerDefaults.General);
 
             jsonSerializerOptions.Converters.Add(new DateOnlyConverter());
             jsonSerializerOptions.Converters.Add(new TimeOnlyConverter());
@@ -27,12 +27,12 @@ internal class JsonOperations
         var list = PeopleMocked();
 
         // setup for to use DateOnlyConverter
-        var options = JsonSerializerOptions();
+        JsonSerializerOptions options = JsonSerializerOptions();
 
 
         File.WriteAllText(FileName, JsonSerializer.Serialize(list, options));
  
-        var peopleList = JsonSerializer.Deserialize<List<Person>>(File.ReadAllText(FileName), options);
+        List<Person>? peopleList = JsonSerializer.Deserialize<List<Person>>(File.ReadAllText(FileName), options);
         // set breakpoint to see the results or do a foreach
 
     }
@@ -40,7 +40,7 @@ internal class JsonOperations
     private static List<Person> PeopleMocked() =>
         new()
         {
-            new Person()
+            new()
             {
                 PersonId = 1, 
                 FirstName = "Karen",
@@ -48,7 +48,7 @@ internal class JsonOperations
                 BirthDate = new DateOnly(1956, 9, 24), 
                 TimeOnly = new TimeOnly(13,0)
             },
-            new Person()
+            new()
             {
                 PersonId = 2, 
                 FirstName = "Mary", 
@@ -56,7 +56,7 @@ internal class JsonOperations
                 BirthDate = new DateOnly(1959, 3, 24),
                 TimeOnly = new TimeOnly(14,30)
             },
-            new Person()
+            new()
             {
                 PersonId = 3, 
                 FirstName = "Jim", 
