@@ -48,6 +48,13 @@ Back in Visual Studio, build the projects (if not interested in EF Core, unload 
 
 Note there is a class named JsonOperations in the project WorkingWithDateOnly which is not executed. If working with json is important, go ahead and run the code.
 
+# Stackoverflow post
+
+The property could not be mapped because it is of type 'DateOnly', which is not a supported primitive type or a valid entity type
+
+[My reply](https://stackoverflow.com/questions/73884768/the-property-could-not-be-mapped-because-it-is-of-type-dateonly-which-is-not/73885097#73885097)
+
+
 # References
 
 - Microsoft docs - [DateOnly Struct](https://docs.microsoft.com/en-us/dotnet/api/system.dateonly?view=net-6.0)
