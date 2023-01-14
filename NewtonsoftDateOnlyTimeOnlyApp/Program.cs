@@ -36,7 +36,8 @@ namespace NewtonsoftDateOnlyTimeOnlyApp
             foreach (var container in readContainers)
             {
                 Console.WriteLine(
-                    $"{container.Id,-3}{container.FirstName,-10}{container.LastName,-15}{container.StartDate,-12} {container.StartTime}");
+                    $"{container.Id,-3}{container.FirstName,-10}{container.LastName,-15}" + 
+                    $"{container.StartDate,-12} {container.StartTime}");
             }
         }
 
@@ -60,7 +61,8 @@ namespace NewtonsoftDateOnlyTimeOnlyApp
             foreach (var container in readContainers)
             {
                 Console.WriteLine(
-                    $"{container.Id,-3}{container.FirstName,-10}{container.LastName,-15}{container.StartDate,-12} {container.StartTime}");
+                    $"{container.Id,-3}{container.FirstName,-10}{container.LastName,-15}" + 
+                    $"{container.StartDate,-12} {container.StartTime}");
             }
         }
     }

@@ -1,6 +1,8 @@
 ﻿using NewtonsoftDateOnlyTimeOnlyApp.Models;
+
 using Bogus;
 using Person = NewtonsoftDateOnlyTimeOnlyApp.Models.Person;
+
 namespace NewtonsoftDateOnlyTimeOnlyApp.Classes;
 
 public class Mocked
@@ -39,7 +41,9 @@ public class Mocked
                 .RuleFor(p => p.FirstName, f => f.Person.FirstName)
                 .RuleFor(p => p.LastName, f => f.Person.LastName)
                 .RuleFor(p => p.BirthDate, f => 
-                    f.Date.BetweenDateOnly(new DateOnly(2000, 1, 1), new DateOnly(2022, 12, 1)))
+                    f.Date.BetweenDateOnly(
+                        new DateOnly(2000, 1, 1), 
+                        new DateOnly(2022, 12, 1)))
             ;
 
 

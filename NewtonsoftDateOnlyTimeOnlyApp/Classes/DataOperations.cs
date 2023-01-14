@@ -24,12 +24,13 @@ internal class DataOperations
         await cn.OpenAsync();
         await using var reader = await cmd.ExecuteReaderAsync();
 
-
-
         reader.Read();
+
         var logItem = new VisitorLog()
         {
-            VisitOn = reader.GetDateOnly(0), EnteredTime = reader.GetTimeOnly(1), ExitedTime = reader.GetTimeOnly(2)
+            VisitOn = reader.GetDateOnly(0), 
+            EnteredTime = reader.GetTimeOnly(1), 
+            ExitedTime = reader.GetTimeOnly(2)
         };
 
         string json = JsonConvert.SerializeObject(logItem, Formatting.Indented);

@@ -1,6 +1,4 @@
-﻿
-
-namespace NewtonsoftDateOnlyTimeOnlyApp.Models;
+﻿namespace NewtonsoftDateOnlyTimeOnlyApp.Models;
 
 public class Person
 {
