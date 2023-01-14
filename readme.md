@@ -4,6 +4,13 @@ This repository shows how to use [DateOnly Struct](https://docs.microsoft.com/en
 
 Every developer/coder at some point will work with dates. For the majority of those working with dates using DateTime will suffice for most task while for others with needs such as interacting with a database which has column type of date it can be awkward transposing from DateTime to date and then it’s now a string. Also, when there is a need to work with json files, the same applies so DateOnly is a welcome addition to the .NET Framework.
 
+![Page](assets/page.png)
+
+</br>
+
+
+![Main](assets/main.png)
+
 ## Project WorkingWithDateOnly shows 
 
 - How to get days for the following week and how to get all days in a month using both DateTime and DateOnly 
