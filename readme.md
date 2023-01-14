@@ -37,6 +37,10 @@ protected override void ConfigureConventions(ModelConfigurationBuilder builder)
 }
 ```
 
+# Project NewtonsoftDateOnlyTimeOnlyApp
+
+Shows how to work with DateOnly with Bogus library and Json.net library
+
 # How to work with provided code
 
 First off, Microsoft Visual Studio 2022 or higher is required along with running Microsoft SQL-Server (at least Express edition for the EF Core project) .
