@@ -22,6 +22,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateOnlyApp1", "DateOnlyApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateOnlyDataProviderApp", "DateOnlyDataProviderApp\DateOnlyDataProviderApp.csproj", "{C240AE4F-DD29-4785-BA66-2B2B8D0E359B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeconstructApp", "DeconstructApp\DeconstructApp.csproj", "{6279F78E-781A-4000-B26C-25D5E70147E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{C240AE4F-DD29-4785-BA66-2B2B8D0E359B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C240AE4F-DD29-4785-BA66-2B2B8D0E359B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C240AE4F-DD29-4785-BA66-2B2B8D0E359B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6279F78E-781A-4000-B26C-25D5E70147E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6279F78E-781A-4000-B26C-25D5E70147E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6279F78E-781A-4000-B26C-25D5E70147E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6279F78E-781A-4000-B26C-25D5E70147E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

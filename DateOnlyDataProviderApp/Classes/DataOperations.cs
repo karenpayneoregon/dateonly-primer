@@ -35,6 +35,7 @@ internal class DataOperations
             EnteredTime = reader.GetTimeOnly(1), 
             ExitedTime = reader.GetTimeOnly(2)
         };
+
     }
 
     public static async Task<List<VisitorLog>> DataReaderLoopExample()
@@ -52,9 +53,7 @@ internal class DataOperations
 
         await cn.OpenAsync();
         await using var reader = await cmd.ExecuteReaderAsync();
-
-
-
+        
         while (reader.Read())
         {
             list.Add(new VisitorLog()
@@ -83,7 +82,7 @@ internal class DataOperations
 
         await cn.OpenAsync();
         
-        DataTable dataTable = new DataTable();
+        DataTable dataTable = new();
 
         dataTable.Load(await cmd.ExecuteReaderAsync());
         return dataTable;
