@@ -12,7 +12,6 @@ Code samples for Json.net which as of version 13.0.2 now supports [DateOnly](htt
 # Requires
 
 - Microsoft [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 v17.4 or higher
-- For the data read sample, [SQLEXPRESS](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
 
 ---
 

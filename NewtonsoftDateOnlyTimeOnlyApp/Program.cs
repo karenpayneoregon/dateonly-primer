@@ -6,17 +6,17 @@ namespace NewtonsoftDateOnlyTimeOnlyApp
 {
     internal partial class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             AnsiConsole.MarkupLine("[white]Working with [/][cyan]DateOnly[/] [white]and[/] [cyan]TimeOnly[/] [white]using[/] [cyan]Newtonsoft.Json[/]");
-            Console.WriteLine();
-            await DataOperations.Read();
+
             LineBreak();
             Sample1();
             LineBreak();
             Sample2();
 
             ExitPrompt();
+      
         }
 
         private static void Sample1()
@@ -24,14 +24,14 @@ namespace NewtonsoftDateOnlyTimeOnlyApp
 
             Helpers.PrintSampleName();
 
-            var containers = Mocked.Container();
+            List<Container> containers = Mocked.Container();
             string json = JsonConvert.SerializeObject(containers, Formatting.Indented);
 
             Console.WriteLine(json);
 
             Console.WriteLine();
 
-            var readContainers = JsonConvert.DeserializeObject<List<Container>>(json);
+            List<Container> readContainers = JsonConvert.DeserializeObject<List<Container>>(json);
 
             foreach (var container in readContainers)
             {

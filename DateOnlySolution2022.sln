@@ -18,7 +18,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewtonsoftDateOnlyTimeOnlyA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityCoreTimeDateUtilities", "EntityCoreTimeDateutilities\EntityCoreTimeDateUtilities.csproj", "{9A1AF169-07EB-4BEF-8C3D-F04529DCC83D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateOnlyApp1", "DateOnlyApp1\DateOnlyApp1.csproj", "{8458F77E-0D4D-4DF5-AD84-BD22227D64DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateOnlyApp1", "DateOnlyApp1\DateOnlyApp1.csproj", "{8458F77E-0D4D-4DF5-AD84-BD22227D64DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateOnlyDataProviderApp", "DateOnlyDataProviderApp\DateOnlyDataProviderApp.csproj", "{C240AE4F-DD29-4785-BA66-2B2B8D0E359B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{8458F77E-0D4D-4DF5-AD84-BD22227D64DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8458F77E-0D4D-4DF5-AD84-BD22227D64DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8458F77E-0D4D-4DF5-AD84-BD22227D64DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C240AE4F-DD29-4785-BA66-2B2B8D0E359B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C240AE4F-DD29-4785-BA66-2B2B8D0E359B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C240AE4F-DD29-4785-BA66-2B2B8D0E359B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C240AE4F-DD29-4785-BA66-2B2B8D0E359B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

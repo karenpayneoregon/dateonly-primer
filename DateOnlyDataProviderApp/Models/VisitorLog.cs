@@ -1,4 +1,4 @@
-﻿namespace NewtonsoftDateOnlyTimeOnlyApp.Models;
+﻿namespace DateOnlyDataProviderApp.Models;
 
 public class VisitorLog
 {
@@ -7,4 +7,6 @@ public class VisitorLog
     public TimeOnly EnteredTime { get; set; }
     public TimeOnly ExitedTime { get; set; }
 
+    public override string ToString() 
+        => $"{VisitOn,-10}{EnteredTime,-10}{ExitedTime}";
 }

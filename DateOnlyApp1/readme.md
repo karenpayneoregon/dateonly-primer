@@ -1,6 +1,6 @@
 ﻿# About
 
-This project is a mirror image of the console project DateOnlyApp.
+This project is a mirror image of the `console` project `DateOnlyApp` in regards to working with `DateOnly`.
 
 > **Note**
 > Run the project DateOnlyApp which will create and populate the database or run the script under the script folder.

@@ -1,4 +1,5 @@
-﻿using ConfigurationLibrary.Classes;
+﻿using System.Globalization;
+using ConfigurationLibrary.Classes;
 using DateOnlyApp.Data;
 using DateOnlyApp.Extensions;
 using Microsoft.Data.SqlClient;
@@ -26,7 +27,6 @@ internal partial class Program
         }
 
         AnsiConsole.MarkupLine("Press [b]ENTER[/] to exit");
-
         Console.ReadLine();
     }
 
