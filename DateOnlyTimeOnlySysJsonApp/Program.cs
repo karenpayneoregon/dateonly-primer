@@ -16,7 +16,8 @@ internal partial class Program
         };
 
         
-        string jsonString = JsonSerializer.Serialize(log, new JsonSerializerOptions { WriteIndented = true });
+        string jsonString = JsonSerializer.Serialize(log, 
+            new JsonSerializerOptions { WriteIndented = true });
 
         var json = new JsonText(jsonString)
             .BracketColor(Color.Green)
@@ -38,7 +39,8 @@ internal partial class Program
         var deserializedLog = JsonSerializer.Deserialize<VisitorLog>(jsonString);
         AnsiConsole.MarkupLine("[white]Deserialize[/]");
         AnsiConsole.MarkupLine($"[yellow]Visited[/] {deserializedLog.VisitOn,-15}" + 
-                               $"[yellow]Entered[/] {deserializedLog.EnteredTime, -15}[yellow]Exit[/] {deserializedLog.ExitedTime, -15}");
+                               $"[yellow]Entered[/] {deserializedLog.EnteredTime, -15}" + 
+                               $"[yellow]Exit[/] {deserializedLog.ExitedTime, -15}");
 
         Console.ReadLine();
     }
