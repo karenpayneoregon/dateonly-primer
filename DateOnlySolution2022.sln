@@ -20,9 +20,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityCoreTimeDateUtilities
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateOnlyApp1", "DateOnlyApp1\DateOnlyApp1.csproj", "{8458F77E-0D4D-4DF5-AD84-BD22227D64DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateOnlyDataProviderApp", "DateOnlyDataProviderApp\DateOnlyDataProviderApp.csproj", "{C240AE4F-DD29-4785-BA66-2B2B8D0E359B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateOnlyDataProviderApp", "DateOnlyDataProviderApp\DateOnlyDataProviderApp.csproj", "{C240AE4F-DD29-4785-BA66-2B2B8D0E359B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeconstructApp", "DeconstructApp\DeconstructApp.csproj", "{6279F78E-781A-4000-B26C-25D5E70147E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeconstructApp", "DeconstructApp\DeconstructApp.csproj", "{6279F78E-781A-4000-B26C-25D5E70147E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateOnlyTimeOnlySysJsonApp", "DateOnlyTimeOnlySysJsonApp\DateOnlyTimeOnlySysJsonApp.csproj", "{2318BA68-EC04-425B-BA58-CD0096D4A9D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +64,10 @@ Global
 		{6279F78E-781A-4000-B26C-25D5E70147E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6279F78E-781A-4000-B26C-25D5E70147E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6279F78E-781A-4000-B26C-25D5E70147E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2318BA68-EC04-425B-BA58-CD0096D4A9D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2318BA68-EC04-425B-BA58-CD0096D4A9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2318BA68-EC04-425B-BA58-CD0096D4A9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2318BA68-EC04-425B-BA58-CD0096D4A9D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
