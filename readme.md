@@ -72,3 +72,7 @@ The property could not be mapped because it is of type 'DateOnly', which is not 
 - [Entity Framework Core working with dates](https://github.com/karenpayneoregon/ef-core-5-dates-csharp)
 - [Working with DateTime](https://github.com/karenpayneoregon/working-with-datetime)
 - [EF Core Value Conversions](https://github.com/karenpayneoregon/ef-core-transforming)
+
+# Mentions
+
+https://twitter.com/ThePracticalDev/status/1615313737035939841
