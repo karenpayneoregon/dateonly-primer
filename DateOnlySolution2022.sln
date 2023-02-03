@@ -24,7 +24,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateOnlyDataProviderApp", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeconstructApp", "DeconstructApp\DeconstructApp.csproj", "{6279F78E-781A-4000-B26C-25D5E70147E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateOnlyTimeOnlySysJsonApp", "DateOnlyTimeOnlySysJsonApp\DateOnlyTimeOnlySysJsonApp.csproj", "{2318BA68-EC04-425B-BA58-CD0096D4A9D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateOnlyTimeOnlySysJsonApp", "DateOnlyTimeOnlySysJsonApp\DateOnlyTimeOnlySysJsonApp.csproj", "{2318BA68-EC04-425B-BA58-CD0096D4A9D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ErikEJ DateOnly TimeOnly", "ErikEJ DateOnly TimeOnly", "{6120DF1C-FE16-42A8-9484-E32393833D1F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitorsLibrary", "VisitorsLibrary\VisitorsLibrary.csproj", "{5A48AE0F-FE71-41E1-A19D-207EDC30D52A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitorsConsoleApp", "VisitorsConsoleApp\VisitorsConsoleApp.csproj", "{93A9CEE0-C04A-4924-8C95-1623872019CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,9 +74,21 @@ Global
 		{2318BA68-EC04-425B-BA58-CD0096D4A9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2318BA68-EC04-425B-BA58-CD0096D4A9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2318BA68-EC04-425B-BA58-CD0096D4A9D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A48AE0F-FE71-41E1-A19D-207EDC30D52A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A48AE0F-FE71-41E1-A19D-207EDC30D52A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A48AE0F-FE71-41E1-A19D-207EDC30D52A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A48AE0F-FE71-41E1-A19D-207EDC30D52A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93A9CEE0-C04A-4924-8C95-1623872019CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93A9CEE0-C04A-4924-8C95-1623872019CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93A9CEE0-C04A-4924-8C95-1623872019CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93A9CEE0-C04A-4924-8C95-1623872019CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5A48AE0F-FE71-41E1-A19D-207EDC30D52A} = {6120DF1C-FE16-42A8-9484-E32393833D1F}
+		{93A9CEE0-C04A-4924-8C95-1623872019CD} = {6120DF1C-FE16-42A8-9484-E32393833D1F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FD6F5E36-08ED-4EC7-A21F-0DA0E7A13FF3}
