@@ -26,9 +26,11 @@ internal partial class Program
         foreach (DataRow row in tableResult.Rows)
         {
             Console.WriteLine(
-                $"{DateOnly.FromDateTime(row.Field<DateTime>("VisitOn")).ToString("MM/dd/yyyy"),-12}" + 
-                $"{row.Field<TimeSpan>("EnteredTime").ToTimeOnly().ToString("hh:mm:ss tt"),-15}" + 
-                $"{row.Field<TimeSpan>("ExitedTime").ToTimeOnly().ToString("hh:mm:ss tt")}");
+                $"{row.ToDateOnly("VisitOn").ToString("MM/dd/yyyy"),-12}" + 
+                $"{row.ToTimeOnly("EnteredTime").ToString("hh:mm:ss tt"),-15}" + 
+                $"{row.ToTimeOnly("ExitedTime").ToString("hh:mm:ss tt")}");
+
+            
         }
 
         AnsiConsole.MarkupLine("[yellow]Press ENTER to exit[/]");
