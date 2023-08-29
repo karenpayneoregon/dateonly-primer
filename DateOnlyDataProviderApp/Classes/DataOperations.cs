@@ -1,7 +1,7 @@
 ﻿using System.Data;
-using ConfigurationLibrary.Classes;
 using DateOnlyDataProviderApp.Models;
 using Microsoft.Data.SqlClient;
+using static ConfigurationLibrary.Classes.ConfigurationHelper;
 
 namespace DateOnlyDataProviderApp.Classes;
 
@@ -21,8 +21,8 @@ internal class DataOperations
             WHERE (V.VisitorIdentifier = 1);
             """;
 
-        await using var cn = new SqlConnection(ConfigurationHelper.ConnectionString());
-        await using var cmd = new SqlCommand { Connection = cn, CommandText = statement };
+        await using SqlConnection cn = new(ConnectionString());
+        await using SqlCommand cmd = new() { Connection = cn, CommandText = statement };
 
         await cn.OpenAsync();
         await using var reader = await cmd.ExecuteReaderAsync();
@@ -31,9 +31,9 @@ internal class DataOperations
 
         return new VisitorLog()
         {
-            VisitOn = reader.GetDateOnly(0), 
-            EnteredTime = reader.GetTimeOnly(1), 
-            ExitedTime = reader.GetTimeOnly(2)
+            VisitOn = await reader.GetDateOnlyAsync(0), 
+            EnteredTime = await reader.GetTimeOnlyAsync(1), 
+            ExitedTime = await reader.GetTimeOnlyAsync(2)
         };
 
     }
@@ -48,8 +48,8 @@ internal class DataOperations
             INNER JOIN VisitorLog AS VL ON V.VisitorIdentifier = VL.VisitorIdentifier 
             """;
 
-        await using var cn = new SqlConnection(ConfigurationHelper.ConnectionString());
-        await using var cmd = new SqlCommand { Connection = cn, CommandText = statement };
+        await using SqlConnection cn = new(ConnectionString());
+        await using SqlCommand cmd = new() { Connection = cn, CommandText = statement };
 
         await cn.OpenAsync();
         await using var reader = await cmd.ExecuteReaderAsync();
@@ -58,9 +58,9 @@ internal class DataOperations
         {
             list.Add(new VisitorLog()
             {
-                VisitOn = reader.GetDateOnly(0),
-                EnteredTime = reader.GetTimeOnly(1),
-                ExitedTime = reader.GetTimeOnly(2)
+                VisitOn = await reader.GetDateOnlyAsync(0),
+                EnteredTime = await reader.GetTimeOnlyAsync(1),
+                ExitedTime = await reader.GetTimeOnlyAsync(2)
             });
         }
 
@@ -77,8 +77,8 @@ internal class DataOperations
             INNER JOIN VisitorLog AS VL ON V.VisitorIdentifier = VL.VisitorIdentifier 
             """;
 
-        await using var cn = new SqlConnection(ConfigurationHelper.ConnectionString());
-        await using var cmd = new SqlCommand { Connection = cn, CommandText = statement };
+        await using SqlConnection cn = new(ConnectionString());
+        await using SqlCommand cmd = new() { Connection = cn, CommandText = statement };
 
         await cn.OpenAsync();
         
