@@ -2,11 +2,11 @@
 
 #nullable disable
 
-using ConfigurationLibrary.Classes;
 using DateOnlyApp.Classes;
 using DateOnlyApp.Data.Configurations;
 using DateOnlyApp.Models;
 using Microsoft.EntityFrameworkCore;
+using static ConfigurationLibrary.Classes.ConfigurationHelper;
 
 namespace DateOnlyApp.Data
 {
@@ -27,7 +27,7 @@ namespace DateOnlyApp.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(ConfigurationHelper.ConnectionString());
+                optionsBuilder.UseSqlServer(ConnectionString());
             }
         }
 
@@ -57,13 +57,14 @@ namespace DateOnlyApp.Data
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 
-        protected override void ConfigureConventions(ModelConfigurationBuilder builder)
-        {
-            builder.Properties<DateOnly>()
-                .HaveConversion<DateOnlyConverter>()
-                .HaveColumnType("date");
+        // For pre EF Core 8
+        //protected override void ConfigureConventions(ModelConfigurationBuilder builder)
+        //{
+        //    builder.Properties<DateOnly>()
+        //        .HaveConversion<DateOnlyConverter>()
+        //        .HaveColumnType("date");
 
-            base.ConfigureConventions(builder);
-        }
+        //    base.ConfigureConventions(builder);
+        //}
     }
 }

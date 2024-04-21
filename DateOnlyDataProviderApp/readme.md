@@ -1,5 +1,8 @@
 ﻿# About
 
+> **Note**
+> April 2024 updated to NET8 and added Dapper example.
+
 An example for reading `DateOnly` and `TimeOnly` from a SQL-Server database table using `Microsoft.Data.SqlClient` version `5.1.0-preview2.22314.2`
 
 If you are use to working with a data provider via a connection and command object the following will be familar.

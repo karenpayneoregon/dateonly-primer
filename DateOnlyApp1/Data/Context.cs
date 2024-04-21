@@ -25,12 +25,17 @@ public partial class Context : DbContext
         {
             entity.Property(e => e.BirthDate).HasColumnType("date");
         });
+
         modelBuilder.HasSequence<int>("seq_test").HasMin(1L);
 
         OnModelCreatingPartial(modelBuilder);
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+    /// <summary>
+    /// This code can be commented out when using EF Core 8 and higher
+    /// </summary>
     protected override void ConfigureConventions(ModelConfigurationBuilder builder)
     {
         builder.Properties<DateOnly>()

@@ -1,4 +1,6 @@
 ﻿using System.Data;
+using Dapper;
+using DateOnlyDataProviderApp.Handlers;
 using DateOnlyDataProviderApp.Models;
 using Microsoft.Data.SqlClient;
 using static ConfigurationLibrary.Classes.ConfigurationHelper;
@@ -68,9 +70,28 @@ internal class DataOperations
 
     }
 
+    public static async Task<List<VisitorLog>> DataReaderDapperExample()
+    {
+        SqlMapper.AddTypeHandler(new SqlDateOnlyTypeHandler());
+        SqlMapper.AddTypeHandler(new SqlTimeOnlyTypeHandler());
+
+        List<VisitorLog> list = [];
+        const string statement = """
+                        SELECT VL.VisitOn, VL.EnteredTime, VL.ExitedTime
+                        FROM Visitor AS V
+                        INNER JOIN VisitorLog AS VL ON V.VisitorIdentifier = VL.VisitorIdentifier
+                        """;
+
+        await using SqlConnection cn = new(ConnectionString());
+ 
+        return  (await cn.QueryAsync<VisitorLog>(statement)).AsList();
+
+
+    }
+
     public static async Task<DataTable> DataTableExample()
     {
-
+        
         var statement = """
             SELECT VL.VisitOn, VL.EnteredTime, VL.ExitedTime 
             FROM Visitor AS V  

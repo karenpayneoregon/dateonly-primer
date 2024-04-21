@@ -7,6 +7,6 @@ public partial class Person
     public int PersonId { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    // see DbContext, ConfigureConventions
+    // see DbContext, ConfigureConventions for pre EF Core 8
     public DateOnly? BirthDate { get; set; } 
 }

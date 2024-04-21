@@ -12,16 +12,8 @@ public class Program
 
         builder.Services.AddRazorPages();
 
-        /*
-        * Used to get database connection string
-        */
-        var configuration = new ConfigurationBuilder()
-            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-            .AddJsonFile("appsettings.json")
-            .Build();
-
         builder.Services.AddDbContextPool<Context>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
                 .EnableSensitiveDataLogging()
                 .LogTo(message => Debug.WriteLine(message), LogLevel.Information));
 

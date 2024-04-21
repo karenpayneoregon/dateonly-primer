@@ -13,8 +13,16 @@ internal partial class Program
         Console.WriteLine(readerResults);
 
         var readerLoopResult = await DataOperations.DataReaderLoopExample();
-        Console.WriteLine();
+        Console.WriteLine(); // set breakpoint here and view in local window
 
+        AnsiConsole.MarkupLine("[yellow]Dapper example[/]");
+        var dapperResult = await DataOperations.DataReaderDapperExample();
+        foreach (var log in dapperResult)
+        {
+            Console.WriteLine($"{log.VisitOn,-12:MM/dd/yyyy}{log.EnteredTime,-15:HH:mm tt}{log.ExitedTime:HH:mm tt}");
+        }
+
+        Console.WriteLine();
         AnsiConsole.MarkupLine("[yellow]All records via DataTable[/]");
 
         /*
