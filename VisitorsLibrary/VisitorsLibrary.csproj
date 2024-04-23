@@ -22,6 +22,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
+		<!-- ReSharper disable once VulnerablePackage -->
 		<PackageReference Include="ErikEJ.EntityFrameworkCore.SqlServer.DateOnlyTimeOnly" Version="7.0.1" />
 	</ItemGroup>
 
