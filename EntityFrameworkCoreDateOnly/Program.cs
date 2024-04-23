@@ -1,7 +1,8 @@
-﻿using ConfigurationLibrary.Classes;
-using DateOnlyApp.Data;
+﻿using DateOnlyApp.Data;
 using DateOnlyApp.Extensions;
+using DateOnlyApp.Models;
 using Microsoft.Data.SqlClient;
+using static ConfigurationLibrary.Classes.ConfigurationHelper;
 
 namespace DateOnlyApp;
 
@@ -24,6 +25,9 @@ internal partial class Program
             AnsiConsole.MarkupLine("[white on red]Failed to connect to database, did you create it?[/]");
             AnsiConsole.MarkupLine("[white on red]if not created see code in Classes\\Program[/]");
         }
+
+
+        var people = await ReadPeople();
 
         AnsiConsole.MarkupLine("Press [b]ENTER[/] to exit");
         Console.ReadLine();
@@ -63,7 +67,7 @@ internal partial class Program
 
         var statement = "SELECT PersonId,FirstName,LastName,BirthDate FROM dbo.Person";
 
-        await using var cn = new SqlConnection(ConfigurationHelper.ConnectionString());
+        await using var cn = new SqlConnection(ConnectionString());
         await using var cmd = new SqlCommand { Connection = cn, CommandText = statement };
         
         await cn.OpenAsync();
@@ -77,5 +81,37 @@ internal partial class Program
         }
 
         Console.WriteLine();
+    }
+
+    public static async Task<List<Person>> ReadPeople()
+    {
+        const string statement = 
+            """
+            SELECT PersonId,FirstName,LastName,BirthDate 
+            FROM dbo.Person
+            """;
+
+        await using SqlConnection cn = new(ConnectionString());
+        await using SqlCommand cmd = new() { Connection = cn, CommandText = statement };
+
+        await cn.OpenAsync();
+        await using SqlDataReader? reader = await cmd.ExecuteReaderAsync();
+
+        List<Person> list = [];
+
+        while (await reader.ReadAsync())
+        {
+            
+            list.Add(new Person()
+            {
+                PersonId = await reader.GetIntAsync(0), 
+                FirstName = await reader.GetStringAsync(1),
+                LastName = await reader.GetStringAsync(2),
+                BirthDate = await reader.GetDateOnlyAsync(3)
+            });
+        }
+
+        return list;
+
     }
 }
